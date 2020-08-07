@@ -15,4 +15,4 @@ Download linux platform zip, unzip, move to /usr/local/bin
 The most common commands are plan and apply, but there a variety of commands to
 format, validate, refresh, and graph terraform config as well as tools to manage state and environment.
 
-You can find more about terraform on the official Hashicorp Terraform site at [https://www.terraform.io/](https://www.terraform.io)
+You can find more about terraform on the official HashiCorp Terraform site at [https://www.terraform.io/](https://www.terraform.io)

@@ -61,12 +61,13 @@
       }
     ],
     "assets": {
-        "host01": [
-            {"file": "", "target": "", "chmod": ""}
-        ]
-    },
+       "host01": [
+           {"file": "index.html", "target": "/home/scrapbook/tutorial/www/", "chmod": "+r"}
+       ]
+   },
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "courseData": "background.sh"
     },
     "finish": {
       "text": "finish.md"
