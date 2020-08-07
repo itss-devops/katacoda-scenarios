@@ -10,7 +10,7 @@ data "template_file" "example" {
     foo = "SM"
   }
 
-  template = "$${foo}  is a leading Philippine company that is invested in market leading businesses in retail, banking and property.\n"
+  template = "$${foo} is a leading Philippine company that is invested in market leading businesses in retail, banking and property.\n"
 }
 </pre>
 

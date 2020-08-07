@@ -54,8 +54,8 @@ terraform plan
 This time you should see some changes:
 
 ```
-  - A rose by any other name would smell as sweet.
-  + A daisy by any other name would smell as sweet.
+  - SM is a leading Philippine company that is invested in market leading businesses in retail, banking and property.
+  + AYALA is a leading Philippine company that is invested in market leading businesses in retail, banking and property.
 ```
 
 Apply the changes:
