@@ -1,5 +1,5 @@
 
-* A provider is an abstract and modular approach for IaaS, SaaS and PaaS vendor integrations
+* A `provider` is an abstract and modular approach for IaaS, SaaS and PaaS vendor integrations
 
 * Each integration is packaged as a provider, which understands the vendor’s APIs and exposes specific resources
 
@@ -7,13 +7,14 @@
 
 * Multiple providers can be referenced in the same project
 
-* There are many [standard providers](https://www.terraform.io/docs/providers/index.html), as well as a large number of thirdparty custom providers
+* There are many [standard providers](https://www.terraform.io/docs/providers/index.html), as well as a large number of third party custom providers
 
-Providers are configured in terraform config files with a .tf extension, which typically include configuraiton of the API endpoint, credentials, debug settings, and other global parameters for a specific API integration.
+Providers are configured in terraform config files with a .tf extension, which typically include configuration of the API endpoint, credentials, debug settings, and other global parameters for a specific API integration.
 
 This config file defines a docker provider with the host where we want to apply our configuration
 
-<pre # Configure Docker provider and connect to the local Docker socket class="file" data-filename="main.tf" data-target="replace">provider "docker" {
+<pre class="file" data-filename="main.tf" data-target="replace">#Configure Docker provider and connect to the local Docker socket
+provider "docker" {
   host = "unix:///var/run/docker.sock"
 }
 
@@ -21,6 +22,6 @@ This config file defines a docker provider with the host where we want to apply 
 
 Multiple providers can be referenced in the same project.
 
-Also, multiple instances of a single provider can be used with "alias", for instance with multiple docker hosts or aws regions.
+Also, multiple instances of a single provider can be used with `alias`, for instance with multiple docker hosts or AWS regions.
 
 For more info, see [Provider documentation](https://www.terraform.io/docs/configuration/providers.html)
