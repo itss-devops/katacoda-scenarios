@@ -20,7 +20,11 @@ We can define our container resource. The resource type is docker_container and 
   image = "${docker_image.nginx.latest}"
   ports {
     internal = 80
-    external = 80
+  }
+  volumes {
+    container_path  = "/usr/share/nginx/html"
+    host_path = "/home/scrapbook/tutorial/www"
+    read_only = true
   }
 }
 </pre>
