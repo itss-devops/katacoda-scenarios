@@ -1,4 +1,4 @@
-Once the plan has been created we need to apply it to reach our desired state.
+Once the plan has been created we need to `apply` it to reach our desired state.
 * Applies the plan, issuing API calls to providers in order to meet the desired state
 * Creates or updating the statefile
 * Output will indicate the changes and the resulting configuration

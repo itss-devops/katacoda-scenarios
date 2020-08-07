@@ -1,5 +1,5 @@
 
-You can check the configuration for errors and validates providers have been correctly initialised. Validate is provider-aware with specific cloud-provider errors.
+You can check the configuration for errors and validates providers have been correctly initialized. `Validate` is provider-aware with specific cloud-provider errors.
 
 `terraform validate`{{execute}}
 
@@ -14,7 +14,7 @@ To create a plan, use the CLI
 
 `terraform plan`{{execute}}
 
-The output of the command indicates the changes. In this case, you'll see a _+ dockercontainer.nginx-server and _+ dockerimage.nginx to highlight adding the new resources. Finally a summary of Plan: 2 to add, 0 to change, 0 to destroy.
+The output of the command indicates the changes. In this case, you'll see a `+ dockercontainer.nginx-server and + dockerimage.nginx` to highlight adding the new resources. Finally a summary of `Plan: 2 to add, 0 to change, 0 to destroy`.
 
 Variables can be overridden using command line arguments
 `terraform plan -var 'container_count=5'`{{execute}}

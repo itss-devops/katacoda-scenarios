@@ -1,10 +1,10 @@
-Terraform works based on configuration files, in this case main.tf. The configuration is a declarative expression of the desired state of your infrastructure. Terraform commands uses all files in the directory that have a .tf extension as configuration input.
+Terraform works based on configuration files, in this case `main.tf`. The configuration is a declarative expression of the desired state of your infrastructure. Terraform command uses all files in the directory that have a `.tf` extension as configuration input.
 
 The config files use a simple, powerful [HCL templating language](https://www.terraform.io/docs/configuration/syntax.html)
 
-A resource is a components of your infrastructure associated with a provider. For example a container or image resource from the docker provider is used to manage real containers and images.
+A `resource` is a components of your infrastructure associated with a provider. For example a container or image resource from the docker provider is used to manage real containers and images.
 
-We can now start defining the resources of our infrastructure. The first resource is our Docker image. A resource has two parameters, one is a TYPE and second a NAME. The type is docker_image and the name is nginx. Within the block we define the name and tag of the Docker Image.
+We can now start defining the resources of our infrastructure. The first resource is our Docker image. A resource has two parameters, `TYPE` and `NAME`. The type is `docker_image` and the name is `nginx`. Within the block we define the name and tag of the Docker Image.
 
 
 <pre class="file" data-filename="main.tf" data-target="append">resource "docker_image" "nginx" {
@@ -12,9 +12,10 @@ We can now start defining the resources of our infrastructure. The first resourc
 }
 </pre>
 
-We can define our container resource. The resource type is docker_container and name as nginx-server. Within the block we set the resource parameters. We can reference other resources, such as a the image.
+We can define our container resource. The resource type is `docker_container` and name as `terraform-nginx-tutorial`. Within the block we set the resource parameters. We can reference other resources, such as a the image.
 
-<pre # Create NGINX container class="file" data-filename="main.tf" data-target="append">resource "docker_container" "nginx-server" {
+<pre class="file" data-filename="main.tf" data-target="append">#Create NGINX container
+resource "docker_container" "nginx-server" {
   count = "${var.container_count}"
   name = "terraform-nginx-tutorial-${count.index+1}"
   image = "${docker_image.nginx.latest}"
