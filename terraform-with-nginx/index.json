@@ -1,0 +1,88 @@
+{
+  "title": "Terraform Part 2",
+  "description": "Terraform with docker nginx",
+  "difficulty": "beginner",
+  "time": "25 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "TERRAFORM INSTALL",
+        "text": "tf-install.md",
+        "verify": "install-verify.sh"
+      },
+      {
+        "title": "TERRAFORM PROJECT",
+        "text": "tf-project.md",
+        "code": "setup.sh"
+      },
+      {
+        "title": "TERRAFORM PROVIDER",
+        "text": "tf-provider.md"
+      },
+      {
+        "title": "TERRAFORM CONFIG",
+        "text": "tf-config.md"
+      },
+      {
+        "title": "TERRAFORM INIT",
+        "text": "tf-init.md"
+      },
+      {
+        "title": "VARIABLES",
+        "text": "tf-variables.md"
+      },
+      {
+        "title": "VALIDATE and PLAN",
+        "text": "tf-plan.md"
+      },
+      {
+        "title": "TERRAFORM APPLY",
+        "text": "tf-apply.md"
+      },
+      {
+        "title": "INSPECT INFRASTRUCTURE",
+        "text": "tf-inspect.md"
+      },
+      {
+        "title": "UPDATE INFRASTRUCTURE",
+        "text": "tf-updateInfr.md"
+      },
+      {
+        "title": "DESTROY INFRASTRUCTURE",
+        "text": "tf-destroy.md"
+      },
+      {
+        "title": "MODULES",
+        "text": "tf-modules.md"
+      },
+      {
+        "title": "A QUICK QUIZ",
+        "text": "tf-quiz.md"
+      }
+    ],
+    "assets": {
+        "host01": [
+            {"file": "", "target": "", "chmod": ""}
+        ]
+    },
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "files": [
+    "nginx/main.tf", "nginx/variables.tf", "nginx/dev.tfvars"
+  ],
+  "environment": {
+    "uilayout": "editor-terminal",
+    "showdashboard": true,
+    "dashboards": [{"name": "nginx-88888", "port": 88888},
+      {"name": "nginx", "href": "https://[[HOST_SUBDOMAIN]]-32768-[[KATACODA_HOST]].environments.katacoda.com"}]
+  },
+  "backend": {
+    "imageid": "ubuntu",
+    "port": 88888
+  }
+}
