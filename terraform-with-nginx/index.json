@@ -45,7 +45,7 @@
       },
       {
         "title": "UPDATE INFRASTRUCTURE",
-        "text": "tf-updateInfr.md"
+        "text": "tf-updateinfra.md"
       },
       {
         "title": "DESTROY INFRASTRUCTURE",
